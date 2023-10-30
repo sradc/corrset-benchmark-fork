@@ -93,8 +93,6 @@ def compute_corrs(qs_combinations, users_who_answered_q, score_matrix, grand_tot
 
 
 data = pd.read_json('../data/data-large.json')
-
 k_corrset(data, K=5, max_iter=10)  # warm up JIT compiler
-
 result, timing = k_corrset(data, K=5, max_iter=10000000)
 print(f'{timing:.9f}')
